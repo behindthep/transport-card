@@ -12,7 +12,7 @@ public class InputBalanceValidator {
                 }
             } else {
                 System.out.println("Balance should be a number.");
-                input.next();
+                input.next(); // съедаем некорректный ввод
             }
         }
         return balance;
