@@ -6,7 +6,7 @@ public class InputBalanceValidator {
         int balance = -1;
         while (balance < 0) {
             if (input.hasNextInt()) {
-                balance = input.nextInt();
+                balance = input.nextInt(); // nextInt() игнорирует пробелы
                 if (balance < 0) {
                     System.out.println("Balance should be positive.");
                 }
