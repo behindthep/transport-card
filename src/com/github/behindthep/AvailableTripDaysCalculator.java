@@ -6,7 +6,6 @@ import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
-import github.behindthep.InputBalanceValidator;
 
 public class AvailableTripDaysCalculator {
     private static final byte TRIP_COST_PER_DAY = 34 * 2;
@@ -43,7 +42,7 @@ public class AvailableTripDaysCalculator {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.println(calculateAvailableTripDays(InputBalanceValidator.validateBalance(input)));
+        System.out.println(calculateAvailableTripDays(validateBalance(input)));
         input.close();
     }
 }
