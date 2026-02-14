@@ -7,7 +7,6 @@ import java.util.Scanner;
 
 // Only local format for dates
 public class TripDaysCalculator {
-
   private static final int TRIP_COST_PER_DAY = 34 * 2;
 
   private static LocalDate calculateDateOfReplenishment(int balance) {
@@ -40,7 +39,13 @@ public class TripDaysCalculator {
         }
       } else {
         System.out.println("Balance can only be a number.");
-        input.next(); // съедаем некорректный ввод
+        input.next();
+        /*
+        console.nextLine(); // Поглощаем оставшийся символ новой строки, оставшийся в буфере после вызова console.nextInt().
+        console.nextInt() читает целое число из входных данных, но не считывает символ новой строки, который вводится после числа нажатием Enter. символ остаётся во входном буфере.
+        След вызов console.nextLine() считывает весь оставшийся в буфере текст до символа новой строки, в данном случае — только сам символ новой строки. 
+        очистить буфер, иначе след вызов console.nextLine() прочитает пустую строку (оставшийся после числа символ новой строки), и пользовательский ввод не корректным.
+        */
       }
     }
 
